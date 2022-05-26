@@ -7,7 +7,7 @@ package paquete01;
 
 /**
  *
- * @author reroes
+ * @author JonathanCoronel
  */
 public class Ejecutor {
     

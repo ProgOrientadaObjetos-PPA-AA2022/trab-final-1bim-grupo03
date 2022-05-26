@@ -7,8 +7,26 @@ package paquete04;
 
 /**
  *
- * @author reroes
+ * @author JonathanCoronel
  */
 public class Ciudad {
-    
+
+    private String nombreCiudad;
+    private String nombreProvinvcia;
+
+    public void establecerNombreCiudad(String n) {
+        nombreCiudad = n;
+    }
+
+    public void establecerNombreProvincia(String n) {
+        nombreProvinvcia = n;
+    }
+
+    public String obtenerNombreCiudad() {
+        return nombreCiudad;
+    }
+
+    public String obtenerNombreProvincia() {
+        return nombreProvinvcia;
+    }
 }

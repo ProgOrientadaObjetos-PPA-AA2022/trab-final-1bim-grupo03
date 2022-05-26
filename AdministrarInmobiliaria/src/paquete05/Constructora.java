@@ -7,8 +7,26 @@ package paquete05;
 
 /**
  *
- * @author reroes
+ * @author JonathanCoronel
  */
 public class Constructora {
-    
+
+    private String nombreConstructora;
+    private String idEmpresa;
+
+    public void establecerNombreConstructora(String n) {
+        nombreConstructora = n;
+    }
+
+    public void establecerIdEmpresa(String n) {
+        idEmpresa = n;
+    }
+
+    public String obtenerNombreCiudad() {
+        return nombreConstructora;
+    }
+
+    public String obtenerNombreProvincia() {
+        return idEmpresa;
+    }
 }

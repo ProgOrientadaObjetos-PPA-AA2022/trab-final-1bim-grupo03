@@ -7,8 +7,29 @@ package paquete02;
 
 /**
  *
- * @author reroes
+ * @author JonathanCoronel
  */
 public class Propietario {
+    private String nombre;
+    private String apellido;
+    private String identificacion;
     
+    public void establecerNombre(String n){
+        nombre =n;
+    }
+    public void establecerApellido(String n){
+        nombre =n;
+    }
+    public void establecerIdentificacion(String n){
+        nombre =n;
+    }
+    public String obtenerNombre(){
+        return nombre;
+    }
+    public String obtenerApellido(){
+        return apellido;
+    }
+    public String obtenerIdentificacion(){
+        return identificacion;
+    }
 }
