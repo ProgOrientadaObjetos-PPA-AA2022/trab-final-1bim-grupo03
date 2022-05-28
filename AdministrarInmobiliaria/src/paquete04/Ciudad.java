@@ -7,13 +7,17 @@ package paquete04;
 
 /**
  *
- * @author JonathanCoronel
+ * @author JonathanCoronel y Pablo Figueroa
  */
 public class Ciudad {
 
     private String nombreCiudad;
     private String nombreProvinvcia;
-
+    
+    public Ciudad(String nomCiu,String nomProv){
+        nombreCiudad = nomCiu;
+        nombreProvinvcia = nomProv;
+    }
     public void establecerNombreCiudad(String n) {
         nombreCiudad = n;
     }

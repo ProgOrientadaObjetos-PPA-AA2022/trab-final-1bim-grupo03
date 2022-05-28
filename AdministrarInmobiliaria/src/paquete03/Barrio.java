@@ -7,12 +7,17 @@ package paquete03;
 
 /**
  *
- * @author JonathanCoronel
+ * @author JonathanCoronel y Pablo Figueroa
  */
 public class Barrio {
 
     private String nombreBarrio;
     private String referencia;
+
+    public Barrio(String nomBar, String refe) {
+        nombreBarrio = nomBar;
+        referencia = refe;
+    }
 
     public void establecerNombreBarrio(String n) {
         nombreBarrio = n;

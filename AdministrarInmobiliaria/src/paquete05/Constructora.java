@@ -7,12 +7,17 @@ package paquete05;
 
 /**
  *
- * @author JonathanCoronel
+ * @author JonathanCoronel y Pablo Figueroa
  */
 public class Constructora {
 
     private String nombreConstructora;
     private String idEmpresa;
+
+    public Constructora(String nomConstru, String idEmpre) {
+        nombreConstructora = nomConstru;
+        idEmpresa = idEmpre;
+    }
 
     public void establecerNombreConstructora(String n) {
         nombreConstructora = n;

@@ -7,29 +7,41 @@ package paquete02;
 
 /**
  *
- * @author JonathanCoronel
+ * @author JonathanCoronel y Pablo Figueroa
  */
 public class Propietario {
+
     private String nombre;
     private String apellido;
     private String identificacion;
-    
-    public void establecerNombre(String n){
-        nombre =n;
+
+    public Propietario(String nom, String ape, String id) {
+        nombre = nom;
+        apellido = ape;
+        identificacion = id;
     }
-    public void establecerApellido(String n){
-        nombre =n;
+
+    public void establecerNombre(String n) {
+        nombre = n;
     }
-    public void establecerIdentificacion(String n){
-        nombre =n;
+
+    public void establecerApellido(String n) {
+        nombre = n;
     }
-    public String obtenerNombre(){
+
+    public void establecerIdentificacion(String n) {
+        nombre = n;
+    }
+
+    public String obtenerNombre() {
         return nombre;
     }
-    public String obtenerApellido(){
+
+    public String obtenerApellido() {
         return apellido;
     }
-    public String obtenerIdentificacion(){
+
+    public String obtenerIdentificacion() {
         return identificacion;
     }
 }
