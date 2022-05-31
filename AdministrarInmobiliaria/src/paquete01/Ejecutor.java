@@ -58,5 +58,29 @@ public class Ejecutor {
             }
         } while (bandera);
     }
-    
+
+    public static void ingresarPropietario() {
+
+    }
+
+    public static void ingresarBarrio() {
+
+    }
+
+    public static void ingresarCiudad() {
+
+    }
+
+    public static void ingresarConstructora() {
+
+    }
+
+    public static void ingresarCasa() {
+
+    }
+
+    public static void ingresarDepartamento() {
+
+    }
+
 }
