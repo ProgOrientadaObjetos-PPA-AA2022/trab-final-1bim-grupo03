@@ -23,15 +23,15 @@ public class Constructora {
         nombreConstructora = n;
     }
 
-    public void establecerIdEmpresa(String n) {
+    public void establecerIdConstructora(String n) {
         idEmpresa = n;
     }
 
-    public String obtenerNombreCiudad() {
+    public String obtenerNombreConstructora() {
         return nombreConstructora;
     }
 
-    public String obtenerNombreProvincia() {
+    public String obtenerIdConstructora() {
         return idEmpresa;
     }
 }
