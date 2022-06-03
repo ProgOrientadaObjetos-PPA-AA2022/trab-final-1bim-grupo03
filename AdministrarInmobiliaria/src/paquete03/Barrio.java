@@ -5,11 +5,13 @@
  */
 package paquete03;
 
+import java.io.Serializable;
+
 /**
  *
  * @author JonathanCoronel y Pablo Figueroa
  */
-public class Barrio {
+public class Barrio implements Serializable{
 
     private String nombreBarrio;
     private String referencia;

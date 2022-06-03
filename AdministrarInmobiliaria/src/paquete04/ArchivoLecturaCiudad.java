@@ -69,7 +69,7 @@ public class ArchivoLecturaCiudad {
         }
     }
 
-    public void establecerCasaBuscada() {
+    public void establecerCiudadBuscada(String n) {
         // 
         File f = new File(obtenerNombreArchivo());
         if (f.exists()) {
@@ -78,7 +78,7 @@ public class ArchivoLecturaCiudad {
                 try {
                     Ciudad registro = (Ciudad) entrada.readObject();
 
-                    if (registro.obtenerNombreCiudad().equals(nombreCiudad)) {
+                    if (registro.obtenerNombreCiudad().equals(n)) {
                         CiudadBuscado = registro;
                         break;//Salir obligatoriamente del ciclo
                     }

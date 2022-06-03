@@ -5,6 +5,7 @@
  */
 package paquete06;
 
+import java.io.Serializable;
 import paquete02.Propietario;
 import paquete03.Barrio;
 import paquete04.Ciudad;
@@ -14,7 +15,7 @@ import paquete05.Constructora;
  *
  * @author JonathanCoronel y Pablo Figueroa
  */
-public class Departamento {
+public class Departamento implements Serializable {
 
     private Propietario propietario;
     private double precioMetroCuadrado;

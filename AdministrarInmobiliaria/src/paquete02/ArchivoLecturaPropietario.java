@@ -45,7 +45,7 @@ public class ArchivoLecturaPropietario {
         IDPropietario = n;
     }
 
-    public void establecerCasas() {
+    public void establecerPropietario() {
 
         propietario = new ArrayList<>();
         File f = new File(obtenerNombreArchivo());
@@ -70,7 +70,7 @@ public class ArchivoLecturaPropietario {
         }
     }
 
-    public void establecerCasaBuscada() {
+    public void establecerCasaBuscada(String id) {
         // 
         File f = new File(obtenerNombreArchivo());
         if (f.exists()) {
@@ -79,7 +79,7 @@ public class ArchivoLecturaPropietario {
                 try {
                     Propietario registro = (Propietario) entrada.readObject();
 
-                    if (registro.obtenerIdentificacion().equals(IDPropietario)) {
+                    if (registro.obtenerIdentificacion().equals(id)) {
                         IDBuscado = registro;
                         break;//Salir obligatoriamente del ciclo
                     }

@@ -5,11 +5,13 @@
  */
 package paquete05;
 
+import java.io.Serializable;
+
 /**
  *
  * @author JonathanCoronel y Pablo Figueroa
  */
-public class Constructora {
+public class Constructora  implements Serializable{
 
     private String nombreConstructora;
     private String idEmpresa;

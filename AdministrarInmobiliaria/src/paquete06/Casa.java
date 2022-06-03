@@ -5,6 +5,7 @@
  */
 package paquete06;
 
+import java.io.Serializable;
 import paquete02.Propietario;
 import paquete03.Barrio;
 import paquete04.Ciudad;
@@ -14,7 +15,7 @@ import paquete05.Constructora;
  *
  * @author JonathanCoronel y Pablo Figueroa
  */
-public class Casa {
+public class Casa implements Serializable{
 
     private Propietario propietario;
     private double precioMetroCuadrado;
@@ -48,8 +49,8 @@ public class Casa {
         numMetros = numMet;
     }
 
-    public void establecerCostoFinal(double cosFin) {
-        costoFinal = cosFin;
+    public void establecerCostoFinal( ) {
+        costoFinal =precioMetroCuadrado * numMetros ;
     }
 
     public void establecerBarrio(Barrio bar) {
@@ -98,6 +99,38 @@ public class Casa {
 
     public Constructora obtenerConstructora() {
         return constructora;
+    }
+    @Override
+    public String toString(){
+        String valor = String.format("Valores\n"
+                + "Nombre Propietario: %s \n"
+                + "Apellido Propietario: %s \n"
+                + "Identificacion Propietario: %s \n"
+                + "Precio por metro Cuadrado: %.2f \n"
+                + "Numero de metros Cuadrados: %.2f \n"
+                + "Costo Final: %.2f "
+                + "Nombre del Barrio: %s "
+                + "Referencia del Barrio %s "
+                + "Nombre de la Ciudad: %s "
+                + "Nombre de la Provincia: %s "
+                + "Numero de Cuartos: %d "
+                + "Nombre Constructora: %s "
+                + "ID de la Constructora: %s",
+                obtenerProp().obtenerNombre(),
+                obtenerProp().obtenerApellido(),
+                obtenerProp().obtenerIdentificacion(),
+                obtenerPrecioMetroCuadrado(),
+                obtenerNumMetros(),
+                obtenerCostoFinal(),
+                obtenerBarrio().obtenerNombreBarrio(),
+                obtenerBarrio().obtenerReferencia(),
+                obtenerCiudad().obtenerNombreCiudad(),
+                obtenerCiudad().obtenerNombreProvincia(),
+                obtenerNumCuartos(),
+                obtenerConstructora().obtenerNombreConstructora(),
+                obtenerConstructora().obtenerIdConstructora()
+                );
+        return valor;
     }
 
 }

@@ -69,7 +69,7 @@ public class ArchivoLecturaBarrio {
         }
     }
 
-    public void establecerCasaBuscada() {
+    public void establecerCasaBuscada(String n) {
         // 
         File f = new File(obtenerNombreArchivo());
         if (f.exists()) {
@@ -78,7 +78,7 @@ public class ArchivoLecturaBarrio {
                 try {
                     Barrio registro = (Barrio) entrada.readObject();
 
-                    if (registro.obtenerNombreBarrio().equals(nombreBarrio)) {
+                    if (registro.obtenerNombreBarrio().equals(n)) {
                         barrioBuscado = registro;
                         break;//Salir obligatoriamente del ciclo
                     }
@@ -108,11 +108,11 @@ public class ArchivoLecturaBarrio {
         return nombreArchivo;
     }
 
-    public String obtenerNombreCiudad() {
+    public String obtenerNombreBarrio() {
         return nombreBarrio;
     }
 
-    public Barrio obtenerCiudadBuscada() {
+    public Barrio obtenerBarrioBuscada() {
         return barrioBuscado;
     }
 

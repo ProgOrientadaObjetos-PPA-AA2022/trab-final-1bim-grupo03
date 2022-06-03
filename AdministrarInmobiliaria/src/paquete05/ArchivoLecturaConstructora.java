@@ -70,7 +70,7 @@ public class ArchivoLecturaConstructora {
         }
     }
 
-    public void establecerCasaBuscada() {
+    public void establecerConstructoraBuscada(String n) {
         // 
          File f = new File(obtenerNombreArchivo());
         if (f.exists()) {
@@ -113,7 +113,7 @@ public class ArchivoLecturaConstructora {
         return idConstructora;
     }
 
-    public Constructora obtenerHospitalID() {
+    public Constructora obtenerConstructuraBuscada() {
         return constructoraBuscado;
     }
 

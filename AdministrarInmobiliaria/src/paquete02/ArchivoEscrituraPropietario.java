@@ -28,6 +28,7 @@ public class ArchivoEscrituraPropietario {
         try {
             salida = new ObjectOutputStream(
                     new FileOutputStream(nombreArchivo));
+            System.out.println("Se creo tu wuevada");
             if (obtenerLista().size() > 0) {
                 for (int i = 0; i < obtenerLista().size(); i++) {
                     establecerPropietario(obtenerLista().get(i));
@@ -58,7 +59,7 @@ public class ArchivoEscrituraPropietario {
 
     public void establecerLista() {
         ArchivoLecturaPropietario l = new ArchivoLecturaPropietario(obtenerNombreArchivo());
-        l.establecerCasas();
+        l.establecerPropietario();
         lista = l.obtenerPropietarios();
     }
 
