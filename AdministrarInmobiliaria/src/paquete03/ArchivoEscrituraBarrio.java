@@ -57,7 +57,7 @@ public class ArchivoEscrituraBarrio {
 
     public void establecerLista() {
         ArchivoLecturaBarrio l = new ArchivoLecturaBarrio(obtenerNombreArchivo());
-        l.establecerCasas();
+        l.establecerBarrios();
         lista = l.obtenerBarrios();
     }
 

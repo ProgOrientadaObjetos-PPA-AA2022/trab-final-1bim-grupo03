@@ -44,7 +44,7 @@ public class ArchivoLecturaCiudad {
         nombreCiudad = n;
     }
 
-    public void establecerCasas() {
+    public void establecerCiudades() {
 
         ciudad = new ArrayList<>();
         File f = new File(obtenerNombreArchivo());

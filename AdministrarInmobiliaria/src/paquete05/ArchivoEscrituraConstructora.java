@@ -56,7 +56,7 @@ public class ArchivoEscrituraConstructora {
 
     public void establecerLista() {
         ArchivoLecturaConstructora l = new ArchivoLecturaConstructora(obtenerNombreArchivo());
-        l.establecerCasas();
+        l.establecerConstructoras();
         lista = l.obtenerConstructora();
     }
 

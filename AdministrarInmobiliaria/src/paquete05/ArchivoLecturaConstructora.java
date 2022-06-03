@@ -45,7 +45,7 @@ public class ArchivoLecturaConstructora {
         idConstructora = n;
     }
 
-    public void establecerCasas() {
+    public void establecerConstructoras() {
 
         constructora = new ArrayList<>();
         File f = new File(obtenerNombreArchivo());

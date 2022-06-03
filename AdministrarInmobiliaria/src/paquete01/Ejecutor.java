@@ -42,7 +42,10 @@ public class Ejecutor {
                     + "6-Ingresar un Departamento\nIngrese un numero:\n");
             num = entrada.nextInt();
             if (num == 1) {
-                ingresarPropietario();
+               ArchivoLecturaPropietario lec1 = new ArchivoLecturaPropietario(nombreDocPro);
+        lec1.establecerPropietario(); // Sirve para presentar las Listas
+        System.out.print(lec1);
+        lec1.cerrarArchivo();
             } else {
                 if (num == 2) {
                     ingresarBarrio();
@@ -59,7 +62,11 @@ public class Ejecutor {
                                 if (num == 6) {
                                     ingresarDepartamento();
                                 } else {
-                                    System.out.println("Numero fuera del Rango");
+                                    if (num == 7) {
+                                        menuPresentar();
+                                    } else {
+                                        System.out.println("Numero fuera del Rango");
+                                    }
                                 }
                             }
                         }
@@ -90,10 +97,12 @@ public class Ejecutor {
         archivo1.establecerPropietario(p1);
         archivo1.establecerSalida();
         archivo1.cerrarArchivo();
-        /*ArchivoLecturaPropietario l1 = new ArchivoLecturaPropietario(nombreDocPro);
-        l1.establecerPropietario();
-        System.out.println(l1);
-        l1.cerrarArchivo();*/
+        //Presentar
+        ArchivoLecturaPropietario lec1 = new ArchivoLecturaPropietario(nombreDocPro);
+        lec1.establecerPropietario(); // Sirve para presentar las Listas
+        System.out.print(lec1);
+        lec1.cerrarArchivo();
+
 
     }
 
@@ -109,6 +118,11 @@ public class Ejecutor {
         archivo2.establecerBarrio(b1);
         archivo2.establecerSalida();
         archivo2.cerrarArchivo();
+        //Presentar
+        ArchivoLecturaBarrio lec1 = new ArchivoLecturaBarrio(nombreDocBar);
+        lec1.establecerBarrios();// Sirve para presentar las Listas
+        System.out.print(lec1);
+        lec1.cerrarArchivo();
 
     }
 
@@ -116,7 +130,7 @@ public class Ejecutor {
         Scanner entrada = new Scanner(System.in);
         String nombreDocC = "data/ciudad.data";
         System.out.println("Ingrese el nombre de la Ciudad");
-        String ciudad = entrada.nextLine();
+        String ciudad = entrada.nextLine(); 
         System.out.println("Ingrese el nombre de la Provincia");
         String provincia = entrada.nextLine();
         Ciudad c1 = new Ciudad(ciudad, provincia);
@@ -124,6 +138,11 @@ public class Ejecutor {
         archivo3.establecerCiudad(c1);
         archivo3.establecerSalida();
         archivo3.cerrarArchivo();
+        //Presentar
+        ArchivoLecturaCiudad lec1 = new ArchivoLecturaCiudad(nombreDocC);
+        lec1.establecerCiudades();// Sirve para presentar las Listas
+        System.out.print(lec1);
+        lec1.cerrarArchivo();
 
     }
 
@@ -139,6 +158,11 @@ public class Ejecutor {
         archivo4.establecerConstructura(c1);
         archivo4.establecerSalida();
         archivo4.cerrarArchivo();
+        //Presentar 
+        ArchivoLecturaConstructora lec1 = new ArchivoLecturaConstructora(nombreDocCons);
+        lec1.establecerConstructoras();// Sirve para presentar las Listas
+        System.out.print(lec1);
+        lec1.cerrarArchivo();
 
     }
 
@@ -295,6 +319,57 @@ public class Ejecutor {
                 lectura4.obtenerCiudadBuscada(), nombreE, ubicacion,
                 lectura5.obtenerConstructuraBuscada());
 
+    }
+    public static void menuPresentar() {
+        Scanner entrada = new Scanner(System.in);
+        boolean bandera = true;
+        int num;
+        String salir;
+                
+        do {
+            System.out.printf("Menu de Opciones de Presentar\n1-Presentar "
+                    + "Propietario\n"
+                    + "2-Presentar Barrios\n3-Presentar Ciudades\n"
+                    + "4-Presentar Cnstructoras\n5-Presentar casas\n"
+                    + "6-Presentar DEpartamentos\nEliga una opción:\n");
+            num = entrada.nextInt();
+            if (num == 1) {
+                
+            } else {
+                if (num == 2) {
+                    ingresarBarrio();
+                } else {
+                    if (num == 3) {
+                        ingresarCiudad();
+                    } else {
+                        if (num == 4) {
+                            ingresarConstructora();
+                        } else {
+                            if (num == 5) {
+                                ingresarCasa();
+                            } else {
+                                if (num == 6) {
+                                    ingresarDepartamento();
+                                } else {
+                                    if (num == 7) {
+                                        menuPresentar();
+                                    } else {
+                                        System.out.println("Numero fuera del Rango");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            entrada.nextLine();
+            System.out.println("Para salir del Programa digite n o para "
+                    + "continuar cualquier otra letra");
+            salir = entrada.nextLine();
+            if (salir.equals("n")) {
+                bandera = false;
+            }
+        } while (bandera);
     }
 
 }

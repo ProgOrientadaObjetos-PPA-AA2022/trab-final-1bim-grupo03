@@ -44,7 +44,7 @@ public class ArchivoLecturaBarrio {
         nombreBarrio = n;
     }
 
-    public void establecerCasas() {
+    public void establecerBarrios() {
 
         barrio = new ArrayList<>();
         File f = new File(obtenerNombreArchivo());
