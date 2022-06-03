@@ -15,7 +15,7 @@ import java.util.ArrayList;
  *
  * @author HP
  */
-public final class ArchivoEscrituraPropietario {
+public class ArchivoEscrituraPropietario {
 
     private String nombreArchivo;
     private ObjectOutputStream salida; // envía los datos a un archivo

@@ -21,7 +21,7 @@ public class ArchivoLecturaCasa {
     private ArrayList<Casa> casa;
     private String nombreArchivo;
     String idCasa;
-    Casa CasaBuscado;
+    Casa lacasa;
 
     public ArchivoLecturaCasa(String n) {
         nombreArchivo = n;
@@ -42,6 +42,9 @@ public class ArchivoLecturaCasa {
 
     public void establecerID(String n) {
         idCasa = n;
+    }
+    public void establecerCasa(Casa n) {
+        lacasa = n;
     }
 
     public void establecerCasas() {
@@ -112,20 +115,44 @@ public class ArchivoLecturaCasa {
         return idCasa;
     }
 
-   /* public Casa obtenerHospitalID() {
-        return CasaBuscado;
-    }*/
+   public Casa obtenerCasa() {
+        return lacasa;
+    }
 
     @Override
     public String toString() {
-        String cadena = "Lista de Hospitales\n";
+        String cadena = "Lista de Casas\n";
         for (int i = 0; i < obtenerCasas().size(); i++) {
             Casa p = obtenerCasas().get(i);
-            cadena = String.format("%s(%d) %s-%.2f - %.2f\n", cadena,
-                    i + 1,
-                    p.obtenerNumCuartos(),
-                    p.obtenerNumMetros(),
-                    p.obtenerPrecioMetroCuadrado());
+            cadena = String.format("Valores\n"
+                + "Nombre Propietario: %s \n"
+                + "Apellido Propietario: %s \n"
+                + "Identificacion Propietario: %s \n"
+                + "Precio por metro Cuadrado: %.2f \n"
+                + "Numero de metros Cuadrados: %.2f \n"
+                + "Costo Final: %.2f \n"
+                + "Nombre del Barrio: %s \n"
+                + "Referencia del Barrio %s \n"
+                + "Nombre de la Ciudad: %s \n"
+                + "Nombre de la Provincia: %s \n"
+                + "Numero de Cuartos: %d \n"
+                + "Nombre Constructora: %s \n"
+                + "ID de la Constructora: %s\n",
+                p.obtenerProp().obtenerNombre(),
+                p.obtenerProp().obtenerApellido(),
+                p.obtenerProp().obtenerIdentificacion(),
+                p.obtenerPrecioMetroCuadrado(),
+                p.obtenerNumMetros(),
+                p.obtenerCostoFinal(),
+                p.obtenerBarrio().obtenerNombreBarrio(),
+                p.obtenerBarrio().obtenerReferencia(),
+                p.obtenerCiudad().obtenerNombreCiudad(),
+                p.obtenerCiudad().obtenerNombreProvincia(),
+                p.obtenerNumCuartos(),
+                p.obtenerConstructora().obtenerNombreConstructora(),
+                p.obtenerConstructora().obtenerIdConstructora()
+                );
+        
         }
 
         return cadena;

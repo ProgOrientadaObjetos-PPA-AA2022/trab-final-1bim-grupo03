@@ -56,7 +56,7 @@ public class ArchivoEscrituraDepartamento {
 
     public void establecerLista() {
         ArchivoLecturaDepartamento l = new ArchivoLecturaDepartamento(obtenerNombreArchivo());
-        l.establecerCasas();
+        l.establecerDepartamentos();
         lista = l.obtenerDepartamentos();
     }
 

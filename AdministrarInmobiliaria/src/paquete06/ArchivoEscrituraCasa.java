@@ -45,6 +45,7 @@ public class ArchivoEscrituraCasa {
     public void establecerCasa(Casa p) {
         registro = p;
     }
+    
 
     public void establecerSalida() {
         try {

@@ -58,8 +58,8 @@ public class Departamento implements Serializable {
         valorAlicuota = valALicu;
     }
 
-    public void establecerCostoFinal(double cosFinal) {
-        valorAlicuota = cosFinal;
+    public void establecerCostoFinal() {
+        costoFinal = (numMetros * precioMetroCuadrado) +(valorAlicuota*12) ;
     }
 
     public void establecerBarrio(Barrio bar) {

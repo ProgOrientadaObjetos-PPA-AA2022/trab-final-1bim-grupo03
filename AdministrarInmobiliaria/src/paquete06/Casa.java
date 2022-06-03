@@ -26,6 +26,11 @@ public class Casa implements Serializable{
     private int numCuartos;
     private Constructora constructora;
 
+    public Casa(double prc, double nmet, int nume){
+        precioMetroCuadrado = prc;
+        numMetros = nmet;
+        numCuartos = nume;
+    }
     public Casa(Propietario prop, double preMe, double numMe, Barrio bar,
             Ciudad ciu, int numCuar, Constructora constr) {
         propietario = prop;
