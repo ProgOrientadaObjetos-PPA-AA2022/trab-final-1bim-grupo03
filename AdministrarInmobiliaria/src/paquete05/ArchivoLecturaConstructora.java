@@ -79,7 +79,7 @@ public class ArchivoLecturaConstructora {
                 try {
                     Constructora registro = (Constructora) entrada.readObject();
                     
-                    if(registro.obtenerIdConstructora().equals(idConstructora)){
+                    if(registro.obtenerIdConstructora().equals(n)){
                         constructoraBuscado = registro;
                         break;//Salir obligatoriamente del ciclo
                     }

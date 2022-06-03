@@ -15,7 +15,7 @@ import java.util.ArrayList;
  *
  * @author HP
  */
-public class ArchivoEscrituraPropietario {
+public final class ArchivoEscrituraPropietario {
 
     private String nombreArchivo;
     private ObjectOutputStream salida; // envía los datos a un archivo
@@ -28,7 +28,6 @@ public class ArchivoEscrituraPropietario {
         try {
             salida = new ObjectOutputStream(
                     new FileOutputStream(nombreArchivo));
-            System.out.println("Se creo tu wuevada");
             if (obtenerLista().size() > 0) {
                 for (int i = 0; i < obtenerLista().size(); i++) {
                     establecerPropietario(obtenerLista().get(i));
